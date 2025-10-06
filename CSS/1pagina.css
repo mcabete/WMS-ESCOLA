@@ -8,6 +8,16 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     background-color: black;
+    
    
+
+}
+
+#caixa1{
+
+    background-color: red;
+
+    margin: 170px;
+  width: 800px;    
 
 }
