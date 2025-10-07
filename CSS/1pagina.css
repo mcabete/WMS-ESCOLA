@@ -1,23 +1,69 @@
 body{
-    
-    background-color:rgba(230, 230, 125, 0.676);
-
+    background-color: rgba(255, 255, 0, 0.17);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
 }
 h1{
-    color: gold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    background-color: black;
+    color: yellow;
+    font-size: 50px;
+    -webkit-text-stroke: 1px #B7963B;
     
+}
+#container{
+    background-color:#FED328;
+    width: 600px;
+    padding: 25px;
+    border-radius: 8px;
+    border-color: #B7963B;
+    border-width: 5px;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.esquerda {
+    width: 50%;
+    text-align: left;
+}
+.esquerda h2{
+    color: #F6F740;
+    -webkit-text-stroke: 1px #B7963B;
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+.esquerda p{
+    font-size: 14px;
+    color: gray;
+    line-height: 1.5;
+}
+.esquerda img{
+    width: 100px;
+    height: auto;
+}
+.direita{
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    padding-top: 20px;
    
+}
+.direita input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
 
 }
-
-#caixa1{
-
-    background-color: red;
-
-    margin: 170px;
-  width: 800px;    
-
+.avancar{
+    background-color:#F6F740;
+    border-radius: 4px;
+    border-style: solid;
+    padding: 8px 15px;
+    margin-left: 4px;
 }
