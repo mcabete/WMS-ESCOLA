@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD
     background-color: rgba(255, 255, 0, 0.17);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -66,4 +67,8 @@ h1{
     border-style: solid;
     padding: 8px 15px;
     margin-left: 4px;
+=======
+    background-color: #f6ff740;
+    
+>>>>>>> cee3eb4fa14ece0038bb129bbe9519310fe005c4
 }
