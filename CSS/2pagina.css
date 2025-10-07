@@ -1,0 +1,49 @@
+body{
+
+    background-color: white ;
+
+
+}
+
+#coluna{
+
+    background-color: #FED328;
+    margin-top: 300px;
+    width: 200px;
+    height: 100px;
+  
+
+}
+
+#Slo{
+    background-color: #FED328;
+    width: 1424px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+#Pes{
+    border-radius: 30px;
+    width: 500px;
+    height: 50px;
+    margin-top: -200px;
+    margin-right: 100px;
+    padding: 10px;
+    padding-right: 100px;
+    margin-left: 450px;
+}
+#Pesquisa{
+    margin-top: -50px;
+    height: 50px;
+}
+#Carrin{
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: 20px;
+}
+#pontin{
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 25px;
+}
