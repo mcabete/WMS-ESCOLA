@@ -1,5 +1,4 @@
 body{
-
     background-color: white ;
 
 
@@ -46,4 +45,15 @@ body{
     position: absolute;
     right: 30px;
     top: 25px;
+    background-color: rgba(255, 255, 0, 0.203);
+    padding: 10px;
+    
+}
+#coluna{
+
+    background-color: rgba(255, 255, 0, 0.58);
+    width: 150px;
+    height: 500px;
+
+
 }
