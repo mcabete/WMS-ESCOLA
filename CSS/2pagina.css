@@ -34,13 +34,16 @@ body{
     margin-top: -50px;
     height: 50px;
 }
+
 #Carrin{
+    max-width: 100px;
     display: block;
     position: absolute;
     right: 100px;
     top: 20px;
 }
 #pontin{
+    max-width: ;
     display: block;
     position: absolute;
     right: 30px;
@@ -52,6 +55,16 @@ body{
 #coluna{
 
     background-color: rgba(255, 255, 0, 0.58);
+    margin-top: auto;
+    margin-right: 10px;
+    padding-top: 1px;
+    padding-right: 20px;
+    padding: 10px;
+
+    position: absolute;
+    left: 0;
+
+
     width: 150px;
     height: 500px;
 
