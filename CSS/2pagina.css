@@ -2,27 +2,30 @@ body {
   background-color: white;
 }
 
-#Slo {
+#caixa1 {
   background-color: #FED328;
   width: 1424px;
+  height: 100px;
   margin-top: -10px;
   margin-left: -10px;
   margin-bottom: 30px;
   padding-bottom: -400px;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px #B7963B ;
+  box-shadow: 3px 3px 10px #B7963B;
 
 }
 
-#bee{
+#logo {
 
   padding-left: 40px;
   padding-top: 10px;
   width: 110px;
+  position: absolute;
+  top: 7px;
 
 }
 
-#Pes {
+#pesquisa {
   border-radius: 30px;
   width: 500px;
   height: 50px;
@@ -31,34 +34,29 @@ body {
   padding: 10px;
   padding-right: 100px;
   margin-left: 450px;
-}
-
-#Pesquisa {
-  margin-top: -50px;
-  height: 50px;
   position: absolute;
-  left: 10px;
-  top: 100px;
-
+  top: 40px;
+  left: 30px;
 }
 
-#Carrin {
+
+#carrinho {
   display: block;
   position: absolute;
   right: 150px;
-  top: 35px;
+  top: 30px;
 }
 
-#pontin {
+#tresPontinhos {
   display: block;
   position: absolute;
   right: 70px;
-  top: 30px;
-  background-color: #FED328 ;
+  top: 25px;
+  background-color: #FED328;
   padding: 10px;
 }
 
-#coluna{
+#coluna {
 
   background-color: #FED328;
   position: absolute;
@@ -66,19 +64,17 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
-  box-shadow: 3px 3px 10px #B7963B ;
-
-
+  box-shadow: 3px 3px 10px #B7963B;
 
 }
 
-ul{
+ul {
 
   list-style: none;
 
 }
 
-li{
+li {
 
   padding-top: 5px;
   padding-right: 80px;
@@ -86,7 +82,7 @@ li{
 
 }
 
-#btnMostrar{
+#btnMostrar {
 
   font-size: 22px;
   background: none;
@@ -96,7 +92,7 @@ li{
 
 }
 
-#btnMostrar1{
+#btnMostrar1 {
 
   font-size: 22px;
   background: none;
@@ -106,7 +102,7 @@ li{
 
 }
 
-#btnMostrar2{
+#btnMostrar2 {
 
   font-size: 22px;
   background: none;
@@ -116,20 +112,235 @@ li{
 
 }
 
-#btnMostrar3{
+#btnMostrar3 {
 
   font-size: 22px;
   background: none;
   border: none;
   height: 40px;
   width: 90px;
- 
+
 
 
 
 }
 
-/* A div começa escondida */
 .oculta {
   display: none;
+}
+
+.titulo {
+  margin: auto;
+  background-color: #FED328;
+  max-width: 100%;
+}
+
+.opcoes {
+  background: none;
+}
+
+.pesquisa {
+  border-radius: 30px;
+  position: absolute;
+  right: 400px;
+  width: 400px;
+  height: 40px;
+  top: 40px;
+  padding-left: 10px;
+}
+
+caixa .lista {
+  position: relative;
+  left: 0px;
+  background-color: #FED328;
+  width: 100px;
+  text-align: justify;
+  border: solid, black;
+  border-radius: 10px;
+}
+
+.grid {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 20px;
+  width: 70%;
+  position: absolute;
+  right: 30px;
+}
+
+.produto {
+  max-width: 300px;
+  text-align: center;
+  border: solid black;
+  border-radius: 30px;
+  padding: 5px;
+}
+
+.custo {
+  text-decoration: line-through;
+  color: red;
+}
+
+.preço {
+  color: green;
+}
+
+.comprar {
+  text-align: center;
+  width: 170px;
+  border-radius: 30px;
+  background-color: #FED328;
+
+}
+
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #FED328;
+  border: solid;
+  border-radius: 5px;
+  text-shadow: #F6FF74 1px 1px 1px;
+}
+
+.img {
+  position: relative;
+  right: 5px;
+  width: 150px;
+}
+
+#novaDiv::-webkit-scrollbar {
+  width: 8px;
+}
+
+#novaDiv::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#novaDiv::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+#novaDiv {
+  scrollbar-color: rgba(0, 0, 0, 0.4) transparent;
+}
+
+#pontin {
+  display: block;
+  position: absolute;
+  right: 30px;
+  top: 25px;
+}
+
+#config {
+  width: 50px;
+  height: 30px;
+  border-radius: 60px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  background: none;
+  cursor: pointer;
+}
+
+#Configura {
+  position: fixed;
+  right: 20px;
+  background-color: gray;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.Esconder {
+  display: none;
+}
+
+#config-btn {
+  position: fixed;
+  top: 35px;
+  right: 20px;
+  background: none;
+  border: rgb(255, 0, 0);
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 10px;
+  width: 40px;
+  height: 10px;
+}
+
+#config-menu {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background: #282c34;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 200px;
+}
+
+#config-menu.show {
+  display: block;
+}
+
+#config-menu label {
+  display: block;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#config-menu input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  left: 10px;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+  width: 60px;
+  height: 35px;
+
+}
+
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+}
+
+
+.label-text {
+  margin-top: 10px;
+  font-size: 18px;
+  user-select: none;
+  position: absolute;
+  top: 10px;
+  right: 50px;
 }
