@@ -1,0 +1,33 @@
+POST http://localhost:3333/api/produtos
+Content-Type: application/json
+
+{
+  "name": "Camiseta verde",
+  "description": "100% algodão com corte amplo e confortável.",
+  "weight": 0.35,
+  "price": 79.90,
+  "category": "Vestuário",
+  "subcategory": "Camisetas"
+}
+
+###
+
+GET http://localhost:3333/api/estoque
+
+###
+
+PUT http://localhost:3333/api/produtos/4ddb57af-4bb8-4f10-8663-2a8a194142ab
+Content-Type: application/json
+
+{
+  "name": "Camiseta Preta",
+  "description": "100% algodão com corte amplo e confortável.",
+  "weight": 0.35,
+  "price": 79.90,
+  "category": "Vestuário",
+  "subcategory": "Camisetas"
+}
+
+### 
+
+DELETE http://localhost:3333/api/produtos/70dee9a4-fe32-4df9-aeba-a348ca802664

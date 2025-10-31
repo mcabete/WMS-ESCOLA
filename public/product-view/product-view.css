@@ -1,0 +1,196 @@
+/* product-view.css - estilo atualizado: botões #ffca28, layout mais amplo e dinâmico */
+
+/* Reset e base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; width: 100%; }
+body {
+  font-family: "Lucida Sans", "Segoe UI", Arial, sans-serif;
+  background: #fbf8f2; /* off-white quente, combina com paleta amarela */
+  color: #222;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Container principal: ocupa toda a viewport, com padding generoso */
+.fullscreen-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Botão voltar: agora com cor da paleta amarela e estilo corporativo */
+#btnBack{
+  align-self: flex-start;
+  background: #ffca28;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .12s ease, filter .12s ease;
+}
+#btnBack:hover { transform: translateY(-2px); filter: brightness(.98); }
+#btnBack:focus { outline: 3px solid rgba(255,202,40,0.25); outline-offset: 2px; }
+
+/* Card principal: ocupa toda a largura útil do container e usa colunas percentuais */
+.product-card{
+  width: 100%;
+  max-width: 100%;                 /* garante que pode crescer até a largura do container */
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(300px, 46%) 1fr; /* 46% para imagem, resto para infos */
+  gap: 48px;
+  background: #fff;
+  border: 1px solid #efe7d0;
+  padding: 36px;
+  align-items: start;
+  border-radius: 8px;
+}
+
+/* Quadro branco que contém a imagem (sempre quadrado) */
+.image-frame{
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #ffffff;
+  border: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+.image-frame img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* garante enquadramento correto e sem "sair" do quadrado */
+  display: block;
+}
+
+/* Coluna info: mais vertical, com espaço entre blocos */
+.product-info{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  min-width: 0; /* evita overflow em flex / grid */
+}
+
+/* Nome do produto: tipografia responsiva */
+.product-info h1{
+  font-size: clamp(20px, 3.2vw, 34px);
+  line-height: 1.08;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+/* ID + botão copiar: deixamos o ID proeminente */
+.id-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+}
+.id-block{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+  background: rgba(255,202,40,0.06);
+  padding:10px 12px;
+  border-radius:6px;
+  border:1px solid rgba(255,202,40,0.14);
+  min-width: 140px;
+}
+.id-block .label{
+  font-size:11px;
+  color:#7a5f00;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing: .06em;
+}
+.id-value{
+  font-family: ui-monospace, "Courier New", monospace;
+  font-size:16px;
+  font-weight:800;
+  color:#111;
+}
+
+/* Botões com cor da paleta (amarela), texto escuro para contraste */
+.btn-ghost, #btnCopyId {
+  background: #ffca28;
+  color: #111;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .12s ease, filter .12s ease;
+}
+.btn-ghost:hover, #btnCopyId:hover { transform: translateY(-2px); filter: brightness(.98); }
+.btn-ghost:focus, #btnCopyId:focus { outline: 3px solid rgba(255,202,40,0.22); outline-offset: 3px; }
+
+/* Descrição */
+.description-section h2{
+  font-size: 13px;
+  color: #2b2b2b;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.description-section p{
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Atributos em grid dinâmico: categoria / subcategoria / peso */
+.category-section{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  gap: 12px;
+}
+.attr{
+  background: #fbf8ef;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #f0ead7;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.attr .label{ font-size:12px; color:#6b5b00; font-weight:700; text-transform:uppercase; }
+.attr .value{ font-size:16px; color:#111; font-weight:700; }
+
+/* Preço em destaque à direita com mais peso visual */
+.price-section{ display:flex; justify-content:flex-end; align-items:center; margin-top:8px; }
+.price{
+  font-size: clamp(18px, 2.6vw, 28px);
+  font-weight:900;
+  color:#b26b00; /* tom mais "ouro" */
+  background: rgba(178,107,0,0.06);
+  padding:8px 14px;
+  border-radius:8px;
+  border:1px solid rgba(178,107,0,0.12);
+}
+
+/* Ajustes para telas menores: colapsa layout, aumenta legibilidade */
+@media (max-width: 1000px){
+  .product-card{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px;
+  }
+  .category-section{ grid-template-columns: repeat(2, 1fr); }
+  .image-frame{ width: 320px; height: auto; aspect-ratio: 1/1; margin: 0 auto; }
+  .price-section{ justify-content:center; }
+}
+@media (max-width: 560px){
+  .fullscreen-container { padding: 20px; }
+  .image-frame{ width: 220px; }
+  .category-section{ grid-template-columns: 1fr; }
+  .product-info h1{ text-align:center; font-size:20px; }
+  .id-row{ justify-content:center; }
+}

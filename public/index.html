@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Produtos</title>
+  <style>
+    .produto {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Produtos</h1>
+  <div id="produtos-container"></div>
+
+  <script>
+    async function carregarProdutos() {
+      const res = await fetch('http://localhost:3333/produtos');
+      const produtos = await res.json();
+
+      const container = document.getElementById('produtos-container');
+      container.innerHTML = ''; // limpa o container
+
+      produtos.forEach(produto => {
+        const div = document.createElement('div');
+        div.className = 'produto';
+        div.innerHTML = `
+          <h2>${produto.name}</h2>
+          <p>${produto.description}</p>
+          <p><strong>Preço:</strong> R$ ${produto.price}</p>
+          <p><strong>Categoria:</strong> ${produto.category} > ${produto.subcategory}</p>
+          <p><strong>Peso:</strong> ${produto.weight} kg</p>
+          <small>Criado em: ${new Date(produto.created_at).toLocaleString()}</small>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    carregarProdutos();
+  </script>
+</body>
+</html>

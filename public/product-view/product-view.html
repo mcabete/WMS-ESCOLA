@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="/product-view/product-view.css">
+</head>
+<body>
+
+  <div class="fullscreen-container">
+    <button id="btnBack">← Voltar</button>
+
+    <div class="product-card">
+      <!-- Coluna esquerda: quadro branco que contém a imagem -->
+      <div class="product-image-container">
+        <div class="image-frame" aria-hidden="true">
+          <img id="product-image" src="/Imagens/product-symbol.jpg" alt="Imagem do produto" />
+        </div>
+      </div>
+
+      <!-- Coluna direita: informações organizadas por seções -->
+      <div class="product-info">
+        <h1 id="product-name">Nome do Produto</h1>
+
+        <!-- ID destacado + botão copiar -->
+        <div class="section id-section">
+          <div class="id-row">
+            <div class="id-block">
+              <span class="label">ID</span>
+              <span id="product-id" class="id-value">—</span>
+            </div>
+            <button id="btnCopyId" class="btn-ghost">Copiar ID</button>
+          </div>
+        </div>
+
+        <!-- Descrição -->
+        <div class="section description-section">
+          <h2>Descrição</h2>
+          <p id="product-description">Descrição do produto</p>
+        </div>
+
+        <!-- Atributos em grid (categoria / subcategoria / peso) -->
+        <div class="section category-section" aria-label="Atributos do produto">
+          <div class="attr">
+            <span class="label">Categoria</span>
+            <span id="product-category" class="value">—</span>
+          </div>
+
+          <div class="attr">
+            <span class="label">Subcategoria</span>
+            <span id="product-subcategory" class="value">—</span>
+          </div>
+
+          <div class="attr">
+            <span class="label">Peso</span>
+            <span id="product-weight" class="value">—</span>
+          </div>
+        </div>
+
+        <!-- Preço destacado -->
+        <div class="section price-section">
+          <div style="flex:1"></div> <!-- empurra preço para a direita na linha -->
+          <div class="price">R$ <span id="product-price">—</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/product-view/product-view.js"></script>
+</body>
+</html>
